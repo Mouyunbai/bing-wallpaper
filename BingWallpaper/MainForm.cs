@@ -135,7 +135,7 @@ namespace BingWallpaper
          
 
             // open Desk Widget
-            new DeskWidget(this).Show();
+            //new DeskWidget(this).Show();
 
             // 
             new Thread(() =>
@@ -284,7 +284,8 @@ namespace BingWallpaper
             _trayMenu.MenuItems.Add(_copyrightLabel);
 
             _trayMenu.MenuItems.Add("-");
-
+            _trayMenu.MenuItems.Add(Resource.btnNext, (s, e) => NextWallpaper());
+            _trayMenu.MenuItems.Add(Resource.btnPre, (s, e) => PreWallpaper());
             _trayMenu.MenuItems.Add(Resource.WallPaperStory, (s, e) =>
             {
                 new WallpaperStoryForm(CurrentWallpaper).ShowDialog();
